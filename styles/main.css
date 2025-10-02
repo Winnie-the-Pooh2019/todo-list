@@ -1,0 +1,40 @@
+
+:root {
+    --main-background-color: #0D0714;
+    --view-background-color: #1D1825;
+    --item-background-color: #15101C;
+    --item-background-color-hover: rgba(21, 16, 28, 0.4);
+
+    --item-text-color: #4e3b67;
+    --item-text-done-color: #5c9986;
+    --placeholder-color: #777777;
+
+    --border-thickness: 1px;
+    --border-color: #9E78CF;
+    --border-radius: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.main-view {
+    background-color: var(--view-background-color);
+}
+
+.actual-tasks, .completed-tasks {
+    background-color: var(--item-background-color);
+}
+
+.task-name::placeholder {
+    color: var(--placeholder-color);
+}
+
+.task-name {
+    border-radius: var(--border-radius);
+    border: var(--border-thickness) solid var(--border-color);
+}
