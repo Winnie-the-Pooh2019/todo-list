@@ -25,7 +25,12 @@
     --border-color: #9E78CF;
 
     --border-radius: 7pt;
+    --border-radius-lg: 10pt;
+    --border-radius-sm: 5pt;
+
     --main-border-radius: 10pt;
+    --main-border-radius-lg: 12pt;
+    --main-border-radius-sm: 8pt;
 
     --font-family: 'Inter', sans-serif;
 
@@ -74,11 +79,16 @@ button {
     width: 100%;
 }
 
+.new-task__name, .new-task__add {
+    height: 35pt;
+    box-sizing: border-box;
+}
+
 .new-task__name {
     border-radius: var(--border-radius);
     border: var(--border-thickness) solid var(--border-color);
     background-color: transparent;
-    padding: 7pt 10pt;
+    padding: 0 10pt;
     margin-right: 15pt;
 
     flex-grow: 1;
@@ -178,15 +188,15 @@ button {
 .task-item__actions-button {
     aspect-ratio: 1 / 1;
     border-radius: var(--border-radius);
-    padding: 0.7rem; /* Используем rem вместо pt */
+    padding: 0.7rem;
     box-sizing: border-box;
 
-    min-width: 2rem; /* Минимальная ширина кнопки */
-    min-height: 2rem; /* Минимальная высота кнопки */
+    min-width: 2rem;
+    min-height: 2rem;
 }
 
 .task-item__actions-button img {
-    width: 1.2rem; /* Размер иконки в относительных единицах */
+    width: 1.2rem;
     height: 1.2rem;
 }
 
@@ -210,7 +220,7 @@ button img {
     height: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1930px) {
     body {
         font-size: var(--font-size-primary-lg);
     }
@@ -221,6 +231,34 @@ button img {
 
     .new-task__name::placeholder {
         font-size: var(--font-size-secondary-lg);
+    }
+
+    .main-view {
+        width: 500pt;
+        padding: 60pt;
+        border-radius: var(--main-border-radius-lg);
+    }
+
+    .new-task__name, .new-task__add {
+        height: 45pt;
+        border-radius: var(--border-radius-lg);
+    }
+
+    .new-task__add {
+        padding: 10pt;
+    }
+
+    .task-item {
+        padding: 20pt 20pt 20pt 25pt;
+    }
+
+    .task-item__actions-button {
+        border-radius: var(--border-radius-lg);
+    }
+
+    .task-item__actions-button img {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
 
@@ -286,5 +324,41 @@ button img {
 
     .new-task__name::placeholder {
         font-size: var(--font-size-secondary-sm);
+    }
+
+    .main-view {
+        border-radius: var(--main-border-radius-sm);
+    }
+
+    .new-task__name, .new-task__add {
+        height: 25pt;
+        border-radius: var(--border-radius-sm);
+    }
+
+    .new-task__add {
+        padding: 7pt;
+    }
+
+    .new-task__add img {
+        height: 15pt;
+        width: auto;
+        display: block;
+    }
+
+    .task-item {
+        padding: 10pt 10pt 10pt 15pt;
+    }
+
+    .task-item__actions-button {
+        padding: 0.5rem;
+        min-width: 1.7rem;
+        min-height: 1.7rem;
+
+        border-radius: var(--border-radius-sm);
+    }
+
+    .task-item__actions-button img {
+        width: 0.9rem;
+        height: 0.9rem;
     }
 }
