@@ -1,0 +1,9 @@
+@import url("_variables.css");
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background-color);
+}
