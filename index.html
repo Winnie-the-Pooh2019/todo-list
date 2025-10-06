@@ -4,72 +4,86 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
-<main>
-    <div class="upper">
-        <input type="text" class="task-name" placeholder="Add new task here"/>
-        <button class="add-task"><img src="plus.png" alt="Plus"></button>
+<main class="main-view">
+    <div class="new-task">
+        <input type="text" class="new-task__name" placeholder="Add new task here"/>
+        <button class="new-task__add"><img src="./images/plus.svg" alt="Plus"></button>
     </div>
-    <div class="actual-tasks">
-        <div>
-            <h2>Tasks to do</h2>
+    <div class="task-section">
+        <div class="section-header">
+            <span>Tasks to do</span>
         </div>
         <div class="tasks-list">
             <div class="task-item">
-                <div class="item-name">
+                <div class="task-item__name">
                     To study html fundamentals
                 </div>
-                <div class="item-actions">
-                    <button class="complete-task"><img src="check.png" alt="Check"></button>
-                    <button class="delete-task"><img src="trash.png" alt="Trash"></button>
+                <div class="task-item__actions">
+                    <button class="task-item__actions-button check-button"><img alt="Check"
+                                                                   aria-label="done"></button>
+                    <button class="task-item__actions-button trash-button"><img alt="Trash"
+                                                                   aria-label="delete"></button>
                 </div>
             </div>
 
             <div class="task-item">
-                <div class="item-name">
+                <div class="task-item__name">
                     To study html fundamentals
                 </div>
-                <div class="item-actions">
-                    <button class="complete-task"><img src="check.png" alt="Check"></button>
-                    <button class="delete-task"><img src="trash.png" alt="Trash"></button>
+                <div class="task-item__actions">
+                    <button class="task-item__actions-button check-button"><img alt="Check"
+                                                                   aria-label="done"></button>
+                    <button class="task-item__actions-button trash-button"><img alt="Trash"
+                                                                   aria-label="delete"></button>
                 </div>
             </div>
 
             <div class="task-item">
-                <div class="item-name">
+                <div class="task-item__name">
                     To study html fundamentals
                 </div>
-                <div class="item-actions">
-                    <button class="complete-task"><img src="check.png" alt="Check"></button>
-                    <button class="delete-task"><img src="trash.png" alt="Trash"></button>
+                <div class="task-item__actions">
+                    <button class="task-item__actions-button check-button"><img alt="Check"
+                                                                   aria-label="done"></button>
+                    <button class="task-item__actions-button trash-button"><img alt="Trash"
+                                                                   aria-label="delete"></button>
                 </div>
             </div>
 
             <div class="task-item">
-                <div class="item-name">
+                <div class="task-item__name">
                     To study html fundamentals
                 </div>
-                <div class="item-actions">
-                    <button class="complete-task"><img src="check.png" alt="Check"></button>
-                    <button class="delete-task"><img src="trash.png" alt="Trash"></button>
+                <div class="task-item__actions">
+                    <button class="task-item__actions-button check-button"><img alt="Check"
+                                                                   aria-label="done"></button>
+                    <button class="task-item__actions-button trash-button"><img alt="Trash"
+                                                                   aria-label="delete"></button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="completed-tasks">
-        <div>
-            <h2>Completed tasks</h2>
+    <div class="task-section">
+        <div class="section-header">
+            <span>Completed tasks</span>
         </div>
         <div class="tasks-list">
-            <div class="task-item">
-                <div class="item-name">
+            <div class="task-item done-task-item">
+                <div class="task-item__name">
                     To start project
                 </div>
-                <div class="item-actions">
-                    <button class="complete-task"><img src="check.png" alt="Check"></button>
-                    <button class="delete-task"><img src="trash.png" alt="Trash"></button>
+                <div class="task-item__actions">
+                    <button class="task-item__actions-button cross-button"><img alt="Check"></button>
+                    <button class="task-item__actions-button trash-button"><img alt="Trash"></button>
                 </div>
             </div>
         </div>
