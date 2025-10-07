@@ -1,0 +1,69 @@
+@import url('../base/_variables.css');
+@import url('../base/_typography.css');
+
+.check-button img {
+    content: url('../../images/check.svg');
+}
+
+.cross-button img {
+    content: url('../../images/cross.svg');
+}
+
+.trash-button img {
+    content: url('../../images/trash.svg');
+}
+
+.task-item__actions-button {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius);
+    padding: 0.7rem;
+    box-sizing: border-box;
+
+    min-width: 2rem;
+    min-height: 2rem;
+}
+
+.task-item__actions-button img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.task-item__actions-button:hover {
+    /*background-color: var(--item-action-background-color-hover);*/
+
+    transition: background-color 0.1s ease;
+}
+
+.task-item__actions-button:focus-visible {
+    background-color: var(--task-item-action-background-color-hover);
+}
+
+.task-item__actions-button:active {
+    background-color: var(--task-item-action-background-color-clicked);
+}
+
+@media (min-width: 1930px) {
+    .task-item__actions-button {
+        border-radius: var(--border-radius-lg);
+    }
+
+    .task-item__actions-button img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-item__actions-button {
+        padding: 0.5rem;
+        min-width: 1.7rem;
+        min-height: 1.7rem;
+
+        border-radius: var(--border-radius-sm);
+    }
+
+    .task-item__actions-button img {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+}

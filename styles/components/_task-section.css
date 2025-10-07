@@ -1,0 +1,11 @@
+@import url('../base/_variables.css');
+@import url('../base/_typography.css');
+
+.task-section {
+    margin-top: 40pt;
+}
+
+.task-section__header {
+    color: var(--text-color-header);
+    font-weight: var(--font-weight-bold);
+}

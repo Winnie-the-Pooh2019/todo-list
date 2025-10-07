@@ -1,0 +1,42 @@
+@import url('../base/_variables.css');
+@import url('../base/_typography.css');
+
+.main-view {
+    background-color: var(--main-view-background-color);
+    padding: 50pt;
+    border-radius: var(--main-view-border-radius);
+
+    width: 400pt;
+}
+
+@media (min-width: 1930px) {
+    .main-view {
+        width: 500pt;
+        padding: 60pt;
+        border-radius: var(--main-view-border-radius-lg);
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .main-view {
+        width: 350pt;
+        padding: 40pt;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-view {
+        width: 100vw;
+        min-height: 100vh;
+        margin: 0;
+        padding: 30pt;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-view {
+        border-radius: var(--main-view-border-radius-sm);
+    }
+}
