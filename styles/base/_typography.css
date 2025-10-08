@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 :root {
     --font-family: 'Inter', sans-serif;
 
-    --font-size-primary-base: 14pt;
+    --font-size-primary-base: 16pt;
     --font-size-primary-lg: 18pt;
     --font-size-primary-sm: 12pt;
 
-    --font-size-secondary-base: 12pt;
+    --font-size-secondary-base: 14pt;
     --font-size-secondary-lg: 16pt;
     --font-size-secondary-sm: 10pt;
 

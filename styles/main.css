@@ -1,9 +1,10 @@
 @import url('./base/_reset.css');
 @import url('./base/_typography.css');
 @import url('./base/_variables.css');
+@import url('./settings/_breakpoints.css');
 @import url('./base/_global.css');
 
-@import url('./components/_main-view.css');
+@import url('layout/_main-view.css');
 @import url('./components/_new-task.css');
 @import url('./components/_task-section.css');
 @import url('./components/_task-item.css');

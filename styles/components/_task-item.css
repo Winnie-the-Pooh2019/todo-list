@@ -1,10 +1,7 @@
-@import url('../base/_variables.css');
-@import url('../base/_typography.css');
-
 .task-item {
     background-color: var(--item-background-color);
     color: var(--text-color-card);
-    margin-top: 10pt;
+    margin-top: 12pt;
     border-radius: var(--border-radius);
 
     display: flex;
@@ -12,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 15pt 15pt 15pt 20pt;
+    padding: 25pt 25pt 25pt 30pt;
 
     transition: background-color 0.3s ease;
 }
@@ -54,14 +51,20 @@
     visibility: visible;
 }
 
-@media (max-width: 1930px) {
+@media (min-width: 1930px) {
     .task-item {
-        padding: 20pt 20pt 20pt 25pt;
+        padding: 27pt 27pt 27pt 32pt;
+    }
+}
+
+@media(max-width: 767px) {
+    .task-item {
+        padding: 15pt 15pt 15pt 20pt;
     }
 }
 
 @media (max-width: 480px) {
     .task-item {
-        padding: 10pt 10pt 10pt 15pt;
+        padding: 12pt 12pt 12pt 17pt;
     }
 }

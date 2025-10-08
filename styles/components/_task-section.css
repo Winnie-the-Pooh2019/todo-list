@@ -1,6 +1,3 @@
-@import url('../base/_variables.css');
-@import url('../base/_typography.css');
-
 .task-section {
     margin-top: 40pt;
 }
@@ -8,4 +5,16 @@
 .task-section__header {
     color: var(--text-color-header);
     font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 767px) {
+    .task-section {
+        margin-top: 30pt;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-section {
+        margin-top: 20pt;
+    }
 }

@@ -3,24 +3,27 @@
 
 .main-view {
     background-color: var(--main-view-background-color);
-    padding: 50pt;
+    padding: 60pt;
+    margin: 20pt 0;
     border-radius: var(--main-view-border-radius);
 
-    width: 400pt;
+    width: 550pt;
 }
 
 @media (min-width: 1930px) {
     .main-view {
-        width: 500pt;
-        padding: 60pt;
+        width: 650pt;
+        padding: 70pt;
+        margin: 30pt 0;
         border-radius: var(--main-view-border-radius-lg);
     }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (max-width: 1023px) {
     .main-view {
-        width: 350pt;
-        padding: 40pt;
+        width: 500pt;
+        padding: 50pt;
+        margin: 15pt 0;
     }
 }
 
@@ -31,12 +34,5 @@
         margin: 0;
         padding: 30pt;
         border-radius: 0;
-        box-sizing: border-box;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-view {
-        border-radius: var(--main-view-border-radius-sm);
     }
 }

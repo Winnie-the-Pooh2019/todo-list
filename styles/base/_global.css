@@ -1,6 +1,3 @@
-@import url("_variables.css");
-@import url("_typography.css");
-
 body {
     display: flex;
     flex-direction: column;
