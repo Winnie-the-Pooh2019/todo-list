@@ -16,11 +16,11 @@
     --border-thickness: 1px;
     --border-color: #9E78CF;
 
-    --border-radius: 7pt;
-    --border-radius-lg: 10pt;
-    --border-radius-sm: 5pt;
+    --border-radius: 0.583rem;
+    --border-radius-lg: 0.833rem;
+    --border-radius-sm: 0.417rem;
 
-    --main-view-border-radius: 10pt;
-    --main-view-border-radius-lg: 12pt;
-    --main-view-border-radius-sm: 8pt;
+    --main-view-border-radius: 0.833rem;
+    --main-view-border-radius-lg: 1rem;
+    --main-view-border-radius-sm: 0.667rem;
 }

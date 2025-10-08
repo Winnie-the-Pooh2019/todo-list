@@ -1,29 +1,26 @@
-@import url('../base/_variables.css');
-@import url('../base/_typography.css');
-
 .main-view {
     background-color: var(--main-view-background-color);
-    padding: 60pt;
-    margin: 20pt 0;
+    padding: 5rem;
+    margin: 1.667rem 0;
     border-radius: var(--main-view-border-radius);
 
-    width: 550pt;
+    width: 45.833rem;
 }
 
 @media (min-width: 1930px) {
     .main-view {
-        width: 650pt;
-        padding: 70pt;
-        margin: 30pt 0;
+        width: 54.167rem;
+        padding: 5.833rem;
+        margin: 2.5rem 0;
         border-radius: var(--main-view-border-radius-lg);
     }
 }
 
 @media (max-width: 1023px) {
     .main-view {
-        width: 500pt;
-        padding: 50pt;
-        margin: 15pt 0;
+        width: 41.667rem;
+        padding: 4.167rem;
+        margin: 1.25rem 0;
     }
 }
 
@@ -32,7 +29,7 @@
         width: 100vw;
         min-height: 100vh;
         margin: 0;
-        padding: 30pt;
+        padding: 2.5rem;
         border-radius: 0;
     }
 }

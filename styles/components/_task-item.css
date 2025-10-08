@@ -1,7 +1,7 @@
 .task-item {
     background-color: var(--item-background-color);
     color: var(--text-color-card);
-    margin-top: 12pt;
+    margin-top: 1rem;
     border-radius: var(--border-radius);
 
     display: flex;
@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 25pt 25pt 25pt 30pt;
+    padding: 2.1rem 2.1rem 2rem 2.5rem;
 
     transition: background-color 0.3s ease;
 }
@@ -31,8 +31,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 5pt;
-    padding-left: 20pt;
+    gap: 0.42rem;
+    padding-left: 1.667rem;
 }
 
 .done-task-item {
@@ -53,18 +53,18 @@
 
 @media (min-width: 1930px) {
     .task-item {
-        padding: 27pt 27pt 27pt 32pt;
+        padding: 2.25rem 2.2rem 2.25rem 2.667rem;
     }
 }
 
 @media(max-width: 767px) {
     .task-item {
-        padding: 15pt 15pt 15pt 20pt;
+        padding: 1.25rem 1.25rem 1.25rem 1.667rem;
     }
 }
 
 @media (max-width: 480px) {
     .task-item {
-        padding: 12pt 12pt 12pt 17pt;
+        padding: 1rem 1rem 1rem 1.417rem;
     }
 }

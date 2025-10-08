@@ -7,15 +7,15 @@
 }
 
 .new-task__name, .new-task__add {
-    height: 40pt;
+    height: 3.333rem;
 }
 
 .new-task__name {
     border-radius: var(--border-radius);
     border: var(--border-thickness) solid var(--border-color);
     background-color: transparent;
-    padding: 0 12pt;
-    margin-right: 15pt;
+    padding: 0 1rem;
+    margin-right: 1.25rem;
 
     flex-grow: 1;
 
@@ -30,7 +30,7 @@
 
 .new-task__add {
     aspect-ratio: 1 / 1;
-    padding: 5pt;
+    padding: 0.417rem;
 
     border-radius: var(--border-radius);
     background-color: var(--new-item-add-background-color);
@@ -52,7 +52,7 @@
 
 @media (min-width: 1930px) {
     .new-task__name {
-        padding: 0 15pt;
+        padding: 0 1.25rem;
     }
 
     .new-task__name::placeholder {
@@ -60,12 +60,12 @@
     }
 
     .new-task__name, .new-task__add {
-        height: 50pt;
+        height: 4.167rem;
         border-radius: var(--border-radius-lg);
     }
 
     .new-task__add {
-        padding: 10pt;
+        padding: 0.833rem;
     }
 }
 
@@ -73,11 +73,11 @@
     .new-task {
         flex-direction: column;
 
-        gap: 10pt;
+        gap: 0.833rem;
     }
 
     .new-task__name, .new-task__add {
-        height: 35pt;
+        height: 2.917rem;
     }
 
     .new-task__name {
@@ -104,7 +104,7 @@
 
 @media (max-width: 480px) {
     .new-task {
-        gap: 5pt;
+        gap: 0.417rem;
     }
 
     .new-task__name::placeholder {
@@ -112,16 +112,16 @@
     }
 
     .new-task__name, .new-task__add {
-        height: 30pt;
+        height: 2.5rem;
         border-radius: var(--border-radius-sm);
     }
 
     .new-task__add {
-        padding: 7pt;
+        padding: 0.583rem;
     }
 
     .new-task__add img {
-        height: 15pt;
+        height: 1.25rem;
         width: auto;
         display: block;
     }

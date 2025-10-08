@@ -1,5 +1,5 @@
 .task-section {
-    margin-top: 40pt;
+    margin-top: 3.333rem;
 }
 
 .task-section__header {
@@ -9,7 +9,7 @@
 
 @media (max-width: 767px) {
     .task-section {
-        margin-top: 30pt;
+        margin-top: 2.5rem;
     }
 }
 
