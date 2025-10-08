@@ -1,11 +1,11 @@
-@import url('./base/_reset.css');
-@import url('./base/_typography.css');
-@import url('./base/_variables.css');
-@import url('./settings/_breakpoints.css');
-@import url('./base/_global.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
+@import url('base/variables.css');
+@import url('settings/breakpoints.css');
+@import url('base/global.css');
 
-@import url('layout/_main-view.css');
-@import url('./components/_new-task.css');
-@import url('./components/_task-section.css');
-@import url('./components/_task-item.css');
-@import url('./components/_task-item__action-button.css');
+@import url('layout/main-view.css');
+@import url('components/new-task.css');
+@import url('components/task-section.css');
+@import url('components/task-item.css');
+@import url('components/task-item__action-button.css');
