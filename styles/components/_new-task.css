@@ -1,0 +1,128 @@
+.new-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.new-task__name, .new-task__add {
+    height: 3.3rem;
+}
+
+.new-task__name {
+    border-radius: var(--border-radius);
+    border: var(--border-thickness) solid var(--border-color);
+    background-color: transparent;
+    padding: 0 1rem;
+    margin-right: 1.25rem;
+
+    flex-grow: 1;
+
+    color: var(--text-color-header);
+    font-size: var(--font-size-primary-base);
+}
+
+.new-task__name::placeholder {
+    color: var(--text-color-placeholder);
+    font-size: var(--font-size-secondary-base);
+}
+
+.new-task__add {
+    aspect-ratio: 1 / 1;
+    padding: 0.417rem;
+
+    border-radius: var(--border-radius);
+    background-color: var(--new-item-add-background-color);
+
+    transition: background-color 0.3s ease;
+}
+
+.new-task__add:hover {
+    background-color: var(--new-item-add-background-color-hover);
+}
+
+.new-task__add:focus-visible {
+    background-color: var(--new-item-add-background-color-hover);
+}
+
+.new-task__add:active {
+    background-color: var(--new-item-add-background-color-clicked);
+}
+
+@media (min-width: 1930px) {
+    .new-task__name {
+        padding: 0 1.25rem;
+    }
+
+    .new-task__name::placeholder {
+        font-size: var(--font-size-secondary-lg);
+    }
+
+    .new-task__name, .new-task__add {
+        height: 4.167rem;
+        border-radius: var(--border-radius-lg);
+    }
+
+    .new-task__add {
+        padding: 0.48rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .new-task {
+        flex-direction: column;
+
+        gap: 0.833rem;
+    }
+
+    .new-task__name, .new-task__add {
+        height: 2.917rem;
+    }
+
+    .new-task__name {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .new-task__add {
+        flex-grow: 1;
+        aspect-ratio: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .new-task__add img {
+        height: auto;
+        width: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-task {
+        gap: 0.417rem;
+    }
+
+    .new-task__name::placeholder {
+        font-size: var(--font-size-secondary-sm);
+    }
+
+    .new-task__name, .new-task__add {
+        height: 2.5rem;
+        border-radius: var(--border-radius-sm);
+    }
+
+    .new-task__add {
+        padding: 0.583rem;
+    }
+
+    .new-task__add img {
+        height: 1.25rem;
+        width: auto;
+        display: block;
+    }
+}

@@ -1,0 +1,20 @@
+:root {
+    --font-family: 'Inter', sans-serif;
+
+    --font-size-primary-base: 14pt;
+    --font-size-primary-lg: 16pt;
+    --font-size-primary-sm: 12pt;
+
+    --font-size-secondary-base: 12pt;
+    --font-size-secondary-lg: 14pt;
+    --font-size-secondary-sm: 10pt;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --text-color-header: #dcdcdc;
+    --text-color-placeholder: #777777;
+    --text-color-card: #9E78CF;
+    --text-color-card-done: #78CFB0;
+}

@@ -1,0 +1,82 @@
+.check-button img {
+    content: url('../../images/check.svg');
+}
+
+.cross-button img {
+    content: url('../../images/cross.svg');
+}
+
+.trash-button img {
+    content: url('../../images/trash.svg');
+}
+
+.task-item__actions-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.task-item__actions-button img {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.task-item__actions-button:hover {
+    /*background-color: var(--item-action-background-color-hover);*/
+
+    transition: background-color 0.1s ease;
+}
+
+.task-item__actions-button:focus-visible {
+    background-color: var(--task-item-action-background-color-hover);
+}
+
+.task-item__actions-button:active {
+    background-color: var(--task-item-action-background-color-clicked);
+}
+
+@media (min-width: 1930px) {
+    .task-item__actions-button {
+        border-radius: var(--border-radius-lg);
+
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    .task-item__actions-button img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .task-item__actions-button {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .task-item__actions-button img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-item__actions-button {
+        width: 2.2rem;
+        height: 2.2rem;
+
+        border-radius: var(--border-radius-sm);
+    }
+
+    .task-item__actions-button img {
+        width: 1rem;
+        height: 1rem;
+    }
+}

@@ -1,0 +1,20 @@
+.task-section {
+    margin-top: 3rem;
+}
+
+.task-section__header {
+    color: var(--text-color-header);
+    font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 767px) {
+    .task-section {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-section {
+        margin-top: 20pt;
+    }
+}

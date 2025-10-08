@@ -1,0 +1,26 @@
+:root {
+    --body-background-color: #0D0714;
+    --main-view-background-color: #1D1825;
+
+    --item-background-color: #15101C;
+    --item-background-color-hover: #15101CB2;
+
+    --new-item-add-background-color: #9E78CF;
+    --new-item-add-background-color-hover: #aa8aca;
+    --new-item-add-background-color-clicked: #cdb0ef;
+
+    --task-item-action-background-color: #15101C;
+    --task-item-action-background-color-hover: #241B2EFF;
+    --task-item-action-background-color-clicked: #30253c;
+
+    --border-thickness: 1px;
+    --border-color: #9E78CF;
+
+    --border-radius: 0.583rem;
+    --border-radius-lg: 0.833rem;
+    --border-radius-sm: 0.417rem;
+
+    --main-view-border-radius: 0.833rem;
+    --main-view-border-radius-lg: 1rem;
+    --main-view-border-radius-sm: 0.667rem;
+}
