@@ -1,12 +1,12 @@
 :root {
     --font-family: 'Inter', sans-serif;
 
-    --font-size-primary-base: 16pt;
-    --font-size-primary-lg: 18pt;
+    --font-size-primary-base: 14pt;
+    --font-size-primary-lg: 16pt;
     --font-size-primary-sm: 12pt;
 
-    --font-size-secondary-base: 14pt;
-    --font-size-secondary-lg: 16pt;
+    --font-size-secondary-base: 12pt;
+    --font-size-secondary-lg: 14pt;
     --font-size-secondary-sm: 10pt;
 
     --font-weight-regular: 400;

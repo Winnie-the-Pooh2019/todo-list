@@ -1,17 +1,17 @@
 .main-view {
     background-color: var(--main-view-background-color);
-    padding: 5rem;
-    margin: 1.667rem 0;
+    padding: 4.5rem;
+    margin: 1rem 0;
     border-radius: var(--main-view-border-radius);
 
-    width: 45.833rem;
+    width: 45rem;
 }
 
 @media (min-width: 1930px) {
     .main-view {
-        width: 54.167rem;
-        padding: 5.833rem;
-        margin: 2.5rem 0;
+        width: 52rem;
+        padding: 5.8rem;
+        margin: 1.2rem 0;
         border-radius: var(--main-view-border-radius-lg);
     }
 }
@@ -19,7 +19,7 @@
 @media (max-width: 1023px) {
     .main-view {
         width: 41.667rem;
-        padding: 4.167rem;
+        padding: 4.2rem;
         margin: 1.25rem 0;
     }
 }
@@ -29,7 +29,13 @@
         width: 100vw;
         min-height: 100vh;
         margin: 0;
-        padding: 2.5rem;
+        padding: 2.5rem 3.2rem;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-view {
+        padding: 2.2rem 2.5rem;
     }
 }

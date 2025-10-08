@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: 2.1rem 2.1rem 2rem 2.5rem;
+    padding: 1.8rem 1.8rem 1.8rem 2.2rem;
 
     transition: background-color 0.3s ease;
 }
@@ -53,18 +53,18 @@
 
 @media (min-width: 1930px) {
     .task-item {
-        padding: 2.25rem 2.2rem 2.25rem 2.667rem;
+        padding: 2rem 2rem 2rem 2.5rem;
     }
 }
 
 @media(max-width: 767px) {
     .task-item {
-        padding: 1.25rem 1.25rem 1.25rem 1.667rem;
+        padding: 1.8rem 1.8rem 1.8rem 2.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .task-item {
-        padding: 1rem 1rem 1rem 1.417rem;
+        padding: 1.2rem 1.2rem 1.2rem 1.5rem;
     }
 }
