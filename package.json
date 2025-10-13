@@ -1,0 +1,15 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "repository": "https://gitverse.ru/NeonBite/todo-list.git",
+  "author": "NeonBite <ivan.duvanov.1@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:dev": "sass --watch styles/main.scss dist/main.css --style=expanded --source-map",
+    "sass:prod": "sass styles/main.scss dist/main.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
