@@ -1,6 +1,31 @@
 :root {
-    --bp-lg: 1930px;
-    --bp-md: 1023px;
-    --bp-sm: 767px;
-    --bp-xs: 480px;
+  --bp-lg: 1930px;
+  --bp-md: 1023px;
+  --bp-sm: 767px;
+  --bp-xs: 480px;
+}
+
+$breakpoints: (
+        xs: 480px,
+        sm: 767px,
+        md: 1023px,
+        lg: 1930px,
+);
+
+@mixin respond($from: null, $to: null) {
+  $query: null;
+  @if $from != null and $to == null {
+    $min: map-get($breakpoints, $from);
+    $query: "(min-width: #{$min})";
+  } @else if $from == null and $to != null {
+    $max: map-get($breakpoints, $to);
+    $query: "(max-width: #{$max})";
+  } @else if $from != null and $to != null {
+    $min: map-get($breakpoints, $from);
+    $max: map-get($breakpoints, $to);
+    $query: "(min-width: #{$min}) and (max-width: #{$max})";
+  }
+  @media #{unquote($query)} {
+    @content;
+  }
 }
