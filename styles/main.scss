@@ -10,7 +10,6 @@
 @use 'components/new-task';
 @use 'components/task-section';
 @use 'components/task-item';
-@use 'components/task-item__action-button';
 
 :root {
   @include apply-theme('dark');

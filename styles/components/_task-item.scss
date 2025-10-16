@@ -1,5 +1,6 @@
 @use '../settings/mixins' as *;
 @use '../settings/themes' as *;
+@use '../settings/breakpoints' as *;
 
 .task-item {
     background-color: themed(item-bg);
@@ -30,6 +31,16 @@
   &.done-task-item {
     color: var(--text-color-card-done);
     text-decoration: line-through;
+
+    .task-item__actions {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover .task-item__actions {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   &__actions {
@@ -39,34 +50,102 @@
     align-items: center;
     gap: 0.42rem;
     padding-left: 1.667rem;
+  }
 
-    &.done-task-item {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
+  &__actions-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: themed(border-radius);
+    box-sizing: border-box;
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    color: themed(text-card);
+
+    &--check .icon {
+      -webkit-mask-image: url('../../images/check.svg');
+      mask-image: url('../../images/check.svg');
     }
 
-    .done-task-item:hover & {
-      opacity: 1;
-      visibility: visible;
+    &--trash .icon {
+      -webkit-mask-image: url('../../images/trash.svg');
+      mask-image: url('../../images/trash.svg');
+    }
+
+    &--cross .icon {
+      -webkit-mask-image: url('../../images/cross.svg');
+      mask-image: url('../../images/cross.svg');
+    }
+
+    .icon {
+      width: 1.3rem;
+      height: 1.3rem;
+      background-color: currentColor;
+
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: contain;
+    }
+
+    &:focus-visible {
+      background-color: themed(action-bg-hover);
+    }
+
+    &:active {
+      background-color: themed(action-bg-active);
+    }
+
+    @include respond($to: xs) {
+      width: 2.2rem;
+      height: 2.2rem;
+
+      border-radius: themed(border-radius-sm);
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    @include respond($to: sm) {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    @include respond($to: xl) {
+      border-radius: themed(border-radius-lg);
+
+      width: 3.3rem;
+      height: 3.3rem;
+
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
     }
   }
-}
 
-@media (min-width: 1930px) {
-    .task-item {
-        padding: 2rem 2rem 2rem 2.5rem;
-    }
-}
+  @include respond($from: lg) {
+    padding: 2rem 2rem 2rem 2.5rem;
+  }
 
-@media(max-width: 767px) {
-    .task-item {
-        padding: 1.8rem 1.8rem 1.8rem 2.2rem;
-    }
-}
+  @include respond($to: sm) {
+    padding: 1.8rem 1.8rem 1.8rem 2.2rem;
+  }
 
-@media (max-width: 480px) {
-    .task-item {
-        padding: 1.2rem 1.2rem 1.2rem 1.5rem;
-    }
+  @include respond($to: xs) {
+    padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+  }
 }
