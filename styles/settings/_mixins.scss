@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use 'themes' as *;
+
+// Миксин для применения CSS переменных
+@mixin apply-theme($theme-name) {
+  $theme: map.get($themes, $theme-name);
+
+  // Генерируем CSS переменные для темы
+  @each $key, $value in $theme {
+    --#{$key}: #{$value};
+  }
+
+  // Добавляем константы
+  @each $key, $value in $constants {
+    --#{$key}: #{$value};
+  }
+}
+
+// Функция для получения значения из темы
+@function themed($key) {
+  @return var(--#{$key});
+}
+
+// Миксин для создания стилей с поддержкой тем
+@mixin themify() {
+  @each $theme-name, $theme-values in $themes {
+    [data-theme="#{$theme-name}"] & {
+      @content;
+    }
+  }
+}

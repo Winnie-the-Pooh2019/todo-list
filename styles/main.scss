@@ -2,6 +2,8 @@
 @use 'base/typography';
 @use 'base/variables';
 @use 'settings/breakpoints';
+@use 'settings/themes' as *;
+@use 'settings/mixins' as *;
 @use 'base/global';
 
 @use 'layout/main-view';
@@ -9,3 +11,27 @@
 @use 'components/task-section';
 @use 'components/task-item';
 @use 'components/task-item__action-button';
+
+:root {
+  @include apply-theme('dark');
+}
+
+[data-theme='dark'] {
+  @include apply-theme('dark');
+}
+
+[data-theme='light'] {
+  @include apply-theme('light');
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include apply-theme('dark');
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @include apply-theme('light');
+  }
+}

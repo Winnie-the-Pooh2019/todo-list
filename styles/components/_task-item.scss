@@ -1,8 +1,11 @@
+@use '../settings/mixins' as *;
+@use '../settings/themes' as *;
+
 .task-item {
-    background-color: var(--item-background-color);
-    color: var(--text-color-card);
+    background-color: themed(item-bg);
+    color: themed(text-card);
     margin-top: 1rem;
-    border-radius: var(--border-radius);
+    border-radius: themed(border-radius);
 
     display: flex;
     flex-direction: row;
@@ -12,6 +15,17 @@
     padding: 1.8rem 1.8rem 1.8rem 2.2rem;
 
     transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: themed(item-bg-hover);
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+  }
 }
 
 .task-item:hover {
