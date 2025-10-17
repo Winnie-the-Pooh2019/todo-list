@@ -1,41 +1,37 @@
+@use '../settings/mixins' as *;
+@use '../settings/themes' as *;
+@use '../settings/breakpoints' as *;
+
 .main-view {
-    background-color: var(--main-view-background-color);
-    padding: 4.5rem;
-    margin: 1rem 0;
-    border-radius: var(--main-view-border-radius);
+  background-color: themed(main-view-bg);
+  padding: 4.5rem;
+  margin: 1rem 0;
+  border-radius: themed(main-view-border-radius);
 
-    width: 45rem;
-}
+  width: 45rem;
 
-@media (min-width: 1930px) {
-    .main-view {
-        width: 52rem;
-        padding: 5.8rem;
-        margin: 1.2rem 0;
-        border-radius: var(--main-view-border-radius-lg);
-    }
-}
+  @include respond($from: lg) {
+    width: 52rem;
+    padding: 5.8rem;
+    margin: 1.2rem 0;
+    border-radius: themed(main-view-border-radius-lg);
+  }
 
-@media (max-width: 1023px) {
-    .main-view {
-        width: 41.667rem;
-        padding: 4.2rem;
-        margin: 1.25rem 0;
-    }
-}
+  @include respond($to: md) {
+    width: 41.667rem;
+    padding: 4.2rem;
+    margin: 1.25rem 0;
+  }
 
-@media (max-width: 767px) {
-    .main-view {
-        width: 100vw;
-        min-height: 100vh;
-        margin: 0;
-        padding: 2.5rem 3.2rem;
-        border-radius: 0;
-    }
-}
+  @include respond($to: sm) {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 2rem;
+    border-radius: 0;
+  }
 
-@media (max-width: 480px) {
-    .main-view {
-        padding: 2.2rem 2.5rem;
-    }
+  @include respond($to: xs) {
+    padding: 1.5rem 1.5rem;
+  }
 }

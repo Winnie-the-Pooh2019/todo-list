@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'themes' as *;
+
+@mixin apply-theme($theme-name) {
+  $theme: map.get($themes, $theme-name);
+
+  @each $key, $value in $theme {
+    --#{$key}: #{$value};
+  }
+
+  @each $key, $value in $constants {
+    --#{$key}: #{$value};
+  }
+}
+
+@function themed($key) {
+  @return var(--#{$key});
+}
+
+@mixin themify() {
+  @each $theme-name, $theme-values in $themes {
+    [data-theme="#{$theme-name}"] & {
+      @content;
+    }
+  }
+}

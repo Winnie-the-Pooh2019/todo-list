@@ -1,128 +1,124 @@
+@use '../settings/themes' as *;
+@use '../settings/mixins' as *;
+@use '../settings/breakpoints' as *;
+@use './shared/icon' as *;
+@use './shared/base-icon-button' as *;
+
 .new-task {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
     width: 100%;
-}
 
-.new-task__name, .new-task__add {
+  &__name {
     height: 3.3rem;
-}
-
-.new-task__name {
-    border-radius: var(--border-radius);
-    border: var(--border-thickness) solid var(--border-color);
+    border: themed(border-thickness) solid themed(border-color);
+    border-radius: themed(border-radius);
     background-color: transparent;
+
     padding: 0 1rem;
     margin-right: 1.25rem;
 
     flex-grow: 1;
 
-    color: var(--text-color-header);
-    font-size: var(--font-size-primary-base);
-}
+    color: themed(text-header);
+    font-size: themed(font-size-primary-base);
 
-.new-task__name::placeholder {
-    color: var(--text-color-placeholder);
-    font-size: var(--font-size-secondary-base);
-}
+    &::placeholder {
+      color: themed(text-placeholder);
+      font-size: themed(font-size-secondary-base);
+    }
+  }
 
-.new-task__add {
-    aspect-ratio: 1 / 1;
+  &__add {
+    @extend .base-icon-button;
+
+    height: 3.3rem;
     padding: 0.417rem;
-
-    border-radius: var(--border-radius);
-    background-color: var(--new-item-add-background-color);
+    background-color: themed(button-primary-bg);
 
     transition: background-color 0.3s ease;
-}
 
-.new-task__add:hover {
-    background-color: var(--new-item-add-background-color-hover);
-}
+    .icon {
+      @extend .icon;
 
-.new-task__add:focus-visible {
-    background-color: var(--new-item-add-background-color-hover);
-}
+      color: themed(button-primary-content);
 
-.new-task__add:active {
-    background-color: var(--new-item-add-background-color-clicked);
-}
+      height: 1.8rem;
 
-@media (min-width: 1930px) {
-    .new-task__name {
-        padding: 0 1.25rem;
+      -webkit-mask-image: url('../../images/plus.svg');
+      mask-image: url('../../images/plus.svg');
     }
 
-    .new-task__name::placeholder {
-        font-size: var(--font-size-secondary-lg);
+    &:hover {
+      background-color: themed(button-primary-bg-hover);
     }
 
-    .new-task__name, .new-task__add {
-        height: 4.167rem;
-        border-radius: var(--border-radius-lg);
+    &:focus-visible {
+      background-color: themed(button-primary-bg-hover);
     }
 
-    .new-task__add {
-        padding: 0.48rem;
+    &:active {
+      background-color: themed(button-primary-bg-active);
     }
-}
+  }
 
-@media (max-width: 767px) {
-    .new-task {
-        flex-direction: column;
+  @include respond($from: xl) {
+    &__name {
+      height: 4.167rem;
+      padding: 0 1.25rem;
+      border-radius: themed(border-radius-lg);
 
-        gap: 0.833rem;
-    }
-
-    .new-task__name, .new-task__add {
-        height: 2.917rem;
-    }
-
-    .new-task__name {
-        width: auto;
-        margin-right: 0;
+      &::placeholder {
+        font-size: themed(font-size-secondary-lg);
+      }
     }
 
-    .new-task__add {
-        flex-grow: 1;
-        aspect-ratio: auto;
+    &__add {
+      height: 4.167rem;
+      padding: 0.48rem;
+      border-radius: themed(border-radius-lg);
+    }
+  }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  @include respond($to: sm) {
+    flex-direction: column;
+    gap: 0.833rem;
+
+    &__name {
+      height: 2.917rem;
+      width: auto;
+      margin-right: 0;
     }
 
-    .new-task__add img {
-        height: auto;
-        width: auto;
-        display: block;
+    &__add {
+      height: 2.917rem;
+      flex-grow: 1;
+      aspect-ratio: auto;
     }
-}
+  }
 
-@media (max-width: 480px) {
-    .new-task {
-        gap: 0.417rem;
-    }
+  @include respond($to: xs) {
+    gap: 0.417rem;
 
-    .new-task__name::placeholder {
-        font-size: var(--font-size-secondary-sm);
-    }
+    &__name {
+      height: 2.5rem;
+      font-size: themed(font-size-primary-sm);
+      border-radius: themed(border-radius-sm);
 
-    .new-task__name, .new-task__add {
-        height: 2.5rem;
-        border-radius: var(--border-radius-sm);
-    }
-
-    .new-task__add {
-        padding: 0.583rem;
+      &::placeholder {
+        font-size: themed(font-size-secondary-sm);
+      }
     }
 
-    .new-task__add img {
+    &__add {
+      height: 2.5rem;
+      padding: 0.583rem;
+
+      .icon {
         height: 1.25rem;
-        width: auto;
-        display: block;
+      }
     }
+  }
 }

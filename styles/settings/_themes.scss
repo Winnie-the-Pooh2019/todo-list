@@ -1,0 +1,72 @@
+$themes: (
+        dark: (
+          // Colors
+                body-bg: #0D0714,
+                main-view-bg: #1D1825,
+                item-bg: #15101C,
+                item-bg-hover: #15101CB2,
+          // Text colors
+                text-header: #dcdcdc,
+                text-placeholder: #777777,
+                text-card: #9E78CF,
+                text-card-done: #78CFB0,
+          // Buttons
+                button-primary-bg: #9E78CF,
+                button-primary-bg-hover: #aa8aca,
+                button-primary-bg-active: #cdb0ef,
+
+                button-primary-content: #e5e2e2,
+          // Actions
+                action-bg: #15101C,
+                action-bg-hover: #241B2E,
+                action-bg-active: #30253c,
+          // Borders
+                border-color: #9E78CF,
+        ),
+        light: (
+          // Colors👎
+                body-bg: #F5F5F5,
+                main-view-bg: #FFFFFF,
+                item-bg: #F8F8F8,
+                item-bg-hover: #F0F0F0,
+          // Text colors
+                text-header: #1A1A1A,
+                text-placeholder: #999999,
+                text-card: #6B46C1,
+                text-card-done: #10B981,
+          // Buttons
+                button-primary-bg: #6B46C1,
+                button-primary-bg-hover: #7C3AED,
+                button-primary-bg-active: #8B5CF6,
+
+                button-primary-content: #ffffff,
+          // Actions
+                action-bg: #F8F8F8,
+                action-bg-hover: #E5E5E5,
+                action-bg-active: #D4D4D4,
+          // Borders
+                border-color: #E5E5E5,
+        )
+);
+
+$constants: (
+  // Typography
+        font-family: ('Inter', sans-serif),
+        font-size-primary-base: 14pt,
+        font-size-primary-lg: 16pt,
+        font-size-primary-sm: 12pt,
+        font-size-secondary-base: 12pt,
+        font-size-secondary-lg: 14pt,
+        font-size-secondary-sm: 10pt,
+        font-weight-regular: 400,
+        font-weight-medium: 500,
+        font-weight-bold: 700,
+  // Borders
+        border-thickness: 1px,
+        border-radius: 0.583rem,
+        border-radius-lg: 0.833rem,
+        border-radius-sm: 0.417rem,
+        main-view-border-radius: 0.833rem,
+        main-view-border-radius-lg: 1rem,
+        main-view-border-radius-sm: 0.667rem,
+);

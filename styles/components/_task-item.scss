@@ -1,8 +1,14 @@
+@use '../settings/mixins' as *;
+@use '../settings/themes' as *;
+@use '../settings/breakpoints' as *;
+@use './shared/icon' as *;
+@use './shared/base-icon-button' as *;
+
 .task-item {
-    background-color: var(--item-background-color);
-    color: var(--text-color-card);
+    background-color: themed(item-bg);
+    color: themed(text-card);
     margin-top: 1rem;
-    border-radius: var(--border-radius);
+    border-radius: themed(border-radius);
 
     display: flex;
     flex-direction: row;
@@ -12,59 +18,125 @@
     padding: 1.8rem 1.8rem 1.8rem 2.2rem;
 
     transition: background-color 0.3s ease;
-}
 
-.task-item:hover {
-    background-color: var(--item-background-color-hover);
-}
+  &:hover {
+    background-color: themed(item-bg-hover);
+  }
 
-.task-item__name {
+  &__name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
     flex-grow: 1;
-}
+  }
 
-.task-item__actions {
+  &.done-task-item {
+    color: themed(text-card-done);
+    text-decoration: line-through;
+
+    .task-item__actions {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      .task-item__actions {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__actions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 0.42rem;
     padding-left: 1.667rem;
-}
+  }
 
-.done-task-item {
-    color: var(--text-color-card-done);
-    text-decoration: line-through;
-}
+  &__actions-button {
+    @extend .base-icon-button;
 
-.done-task-item .task-item__actions {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
+    width: 2.8rem;
+    height: 2.8rem;
 
-.done-task-item:hover .task-item__actions {
-    opacity: 1;
-    visibility: visible;
-}
-
-@media (min-width: 1930px) {
-    .task-item {
-        padding: 2rem 2rem 2rem 2.5rem;
+    &--check .icon {
+      -webkit-mask-image: url('../../images/check.svg');
+      mask-image: url('../../images/check.svg');
     }
-}
 
-@media(max-width: 767px) {
-    .task-item {
-        padding: 1.8rem 1.8rem 1.8rem 2.2rem;
+    &--trash .icon {
+      -webkit-mask-image: url('../../images/trash.svg');
+      mask-image: url('../../images/trash.svg');
     }
-}
 
-@media (max-width: 480px) {
-    .task-item {
-        padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+    &--cross .icon {
+      -webkit-mask-image: url('../../images/cross.svg');
+      mask-image: url('../../images/cross.svg');
     }
+
+    .icon {
+      color: themed(text-card);
+
+      width: 1.3rem;
+      height: 1.3rem;
+    }
+
+    &:focus-visible {
+      background-color: themed(action-bg-hover);
+    }
+
+    &:active {
+      background-color: themed(action-bg-active);
+    }
+
+    @include respond($to: xs) {
+      width: 2.2rem;
+      height: 2.2rem;
+
+      border-radius: themed(border-radius-sm);
+
+      .icon {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    @include respond($to: sm) {
+      width: 3.2rem;
+      height: 3.2rem;
+
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+
+    @include respond($to: xl) {
+      border-radius: themed(border-radius-lg);
+
+      width: 3.3rem;
+      height: 3.3rem;
+
+      .icon {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+
+  @include respond($from: lg) {
+    padding: 2rem 2rem 2rem 2.5rem;
+  }
+
+  @include respond($to: sm) {
+    padding: 1.8rem 1.8rem 1.8rem 2.2rem;
+  }
+
+  @include respond($to: xs) {
+    padding: 1.2rem 1.2rem 1.2rem 1.5rem;
+  }
 }

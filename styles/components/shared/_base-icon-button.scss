@@ -1,0 +1,20 @@
+@use '../../settings/themes' as *;
+@use '../../settings/mixins' as *;
+@use '../../settings/breakpoints' as *;
+
+.base-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  border-radius: themed(border-radius);
+  box-sizing: border-box;
+
+  @include respond($from: lg) {
+    border-radius: themed(border-radius-lg);
+  }
+
+  @include respond($to: sm) {
+    border-radius: themed(border-radius-sm);
+  }
+}
