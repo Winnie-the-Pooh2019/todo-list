@@ -1,8 +1,6 @@
 @use '../settings/mixins' as *;
 @use '../settings/themes' as *;
 @use '../settings/breakpoints' as *;
-@use "variables" as v;
-@use "typography" as typ;
 
 body {
   display: flex;

@@ -1,4 +1,3 @@
-// Определяем токены дизайн-системы
 $themes: (
         dark: (
           // Colors
@@ -50,7 +49,6 @@ $themes: (
         )
 );
 
-// Константы (не зависят от темы)
 $constants: (
   // Typography
         font-family: ('Inter', sans-serif),
