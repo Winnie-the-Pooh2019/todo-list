@@ -15,6 +15,8 @@ $themes: (
                 button-primary-bg: #9E78CF,
                 button-primary-bg-hover: #aa8aca,
                 button-primary-bg-active: #cdb0ef,
+
+                button-primary-content: #e5e2e2,
           // Actions
                 action-bg: #15101C,
                 action-bg-hover: #241B2E,
@@ -23,7 +25,7 @@ $themes: (
                 border-color: #9E78CF,
         ),
         light: (
-          // Colors
+          // Colors👎
                 body-bg: #F5F5F5,
                 main-view-bg: #FFFFFF,
                 item-bg: #F8F8F8,
@@ -37,6 +39,8 @@ $themes: (
                 button-primary-bg: #6B46C1,
                 button-primary-bg-hover: #7C3AED,
                 button-primary-bg-active: #8B5CF6,
+
+                button-primary-content: #ffffff,
           // Actions
                 action-bg: #F8F8F8,
                 action-bg-hover: #E5E5E5,

@@ -1,6 +1,8 @@
 @use '../settings/mixins' as *;
 @use '../settings/themes' as *;
 @use '../settings/breakpoints' as *;
+@use './shared/icon' as *;
+@use './shared/base-icon-button' as *;
 
 .task-item {
     background-color: themed(item-bg);
@@ -29,17 +31,20 @@
   }
 
   &.done-task-item {
-    color: var(--text-color-card-done);
+    color: themed(text-card-done);
     text-decoration: line-through;
 
     .task-item__actions {
       opacity: 0;
-      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
 
-    &:hover .task-item__actions {
-      opacity: 1;
-      visibility: visible;
+    &:hover {
+      .task-item__actions {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
   }
 
@@ -53,17 +58,10 @@
   }
 
   &__actions-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1 / 1;
-    border-radius: themed(border-radius);
-    box-sizing: border-box;
+    @extend .base-icon-button;
 
     width: 2.8rem;
     height: 2.8rem;
-
-    color: themed(text-card);
 
     &--check .icon {
       -webkit-mask-image: url('../../images/check.svg');
@@ -81,17 +79,10 @@
     }
 
     .icon {
+      color: themed(text-card);
+
       width: 1.3rem;
       height: 1.3rem;
-      background-color: currentColor;
-
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-size: contain;
-
-      -webkit-mask-repeat: no-repeat;
-      -webkit-mask-position: center;
-      -webkit-mask-size: contain;
     }
 
     &:focus-visible {
