@@ -64,18 +64,18 @@
     height: 2.8rem;
 
     &--check .icon {
-      -webkit-mask-image: url('../../images/check.svg');
-      mask-image: url('../../images/check.svg');
+      -webkit-mask-image: url('/images/check.svg');
+      mask-image: url('/images/check.svg');
     }
 
     &--trash .icon {
-      -webkit-mask-image: url('../../images/trash.svg');
-      mask-image: url('../../images/trash.svg');
+      -webkit-mask-image: url('/images/trash.svg');
+      mask-image: url('/images/trash.svg');
     }
 
     &--cross .icon {
-      -webkit-mask-image: url('../../images/cross.svg');
-      mask-image: url('../../images/cross.svg');
+      -webkit-mask-image: url('/images/cross.svg');
+      mask-image: url('/images/cross.svg');
     }
 
     .icon {
