@@ -1,4 +1,6 @@
-@use "../settings/breakpoints" as bp;
+@use '../settings/mixins' as *;
+@use '../settings/themes' as *;
+@use '../settings/breakpoints' as *;
 @use "variables" as v;
 @use "typography" as typ;
 
@@ -7,29 +9,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--body-background-color);
+  background-color: themed(body-bg);
 
-  font-family: typ.$font-family, sans-serif;
-  font-size: var(--font-size-primary-base);
-  font-weight: var(--font-weight-regular);
+  font-family: themed(font-family), sans-serif;
+  font-size: themed(font-size-primary-base);
+  font-weight: themed(font-weight-regular);
 
-  @include bp.respond(lg, null) {
-    font-size: var(--font-size-primary-lg);
+  @include respond($from: lg) {
+    font-size: themed(font-size-primary-lg);
   }
 
-  @include bp.respond(null, md) {
+  @include respond($to: md) {
     margin: 0;
     padding: 0;
     min-height: 100vh;
   }
 
-  @include bp.respond(null, sm) {
+  @include respond($to: sm) {
     margin: 0;
     padding: 0;
     min-height: 100vh;
   }
 
-  @include bp.respond(null, xs) {
-    font-size: var(--font-size-primary-sm);
+  @include respond($to: xs) {
+    font-size: themed(font-size-primary-sm);
   }
 }

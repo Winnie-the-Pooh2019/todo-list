@@ -1,20 +1,20 @@
+@use '../settings/mixins' as *;
+@use '../settings/themes' as *;
+@use '../settings/breakpoints' as *;
+
 .task-section {
-    margin-top: 3rem;
-}
+    margin-top: 2.8rem;
 
-.task-section__header {
-    color: var(--text-color-header);
-    font-weight: var(--font-weight-bold);
-}
+  &__header {
+    color: themed(text-header);
+    font-weight: themed(font-weight-bold);
+  }
 
-@media (max-width: 767px) {
-    .task-section {
-        margin-top: 2.5rem;
-    }
-}
+  @include respond($to: sm) {
+    margin-top: 2.5rem;
+  }
 
-@media (max-width: 480px) {
-    .task-section {
-        margin-top: 20pt;
-    }
+  @include respond($to: xs) {
+    margin-top: 2rem;
+  }
 }
